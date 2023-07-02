@@ -1,4 +1,4 @@
-# Kartodromo Front
+# Race Car Tracker - Front
 
 O cronometro de kartódromo é uma aplicação em Angular 13 desenvolvida para registro de campeonatos de corrida de automóveis. 
 A ideia é que seja a interface de comunicação entre o microcontrolador, que captura os tempos de cada volta na pista, e a aplicação Web, que disponibiliza
