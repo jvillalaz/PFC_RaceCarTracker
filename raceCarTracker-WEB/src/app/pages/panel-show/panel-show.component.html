@@ -1,0 +1,85 @@
+<nb-card>
+    <nb-card-header class="bkg-header-yellow">Carro na Pista
+    </nb-card-header>
+    <nb-card-body>
+
+
+        <div class="d-flex flex-row justify-content-between mb-4">
+            <div class="form-group resp-form-row column ml-sm-4 ml-md-4 ml-lg-4">
+                <label for="championship" class="label">Campeonato</label>
+                <nb-select (selectedChange)="getRoundByChampionship($event)" fullWidth placeholder="Campeonato">
+                    <nb-option *ngFor="let championship of championships" [value]="championship._id">
+                        {{championship.name}}
+                    </nb-option>
+                </nb-select>
+            </div>
+
+            <div class="form-group resp-form-row column ml-sm-4 ml-md-4 ml-lg-4">
+                <label for="championship" class="label">Baterias</label>
+                <nb-select [disabled]="rounds.length ==0" [(selected)]="selected"
+                    (selectedChange)="getCarsByRound($event)" fullWidth placeholder="Bateria">
+                    <nb-option *ngFor="let round of rounds" [value]="round._id">
+                        {{round.name}}
+                    </nb-option>
+                </nb-select>
+            </div>
+
+            <div class="form-group resp-form-row column ml-sm-4 ml-md-4 ml-lg-4">
+                <label for="championship" class="label">Enviar Carro Para Pista:</label>
+                <nb-select [disabled]="cars.length ==0" (selectedChange)="sendCarToTrack($event)" fullWidth
+                    placeholder="Carro">
+                    <nb-option *ngFor="let car of cars" [value]="car._id">
+                        {{car.name}}
+                    </nb-option>
+                </nb-select>
+            </div>
+        </div>
+
+        <div class="d-flex flex-row justify-content-around">
+            <div class="mb-4">
+                <div>
+                    <strong>Nome:</strong> {{currentCar?.car.name}}
+                </div>
+                <div>
+                    <strong>Modelo:</strong> {{currentCar?.car.model}}
+                </div>
+                <div>
+                    <strong>Proprietário:</strong> {{currentCar?.car.owner}}
+                </div>
+                <div>
+                    <strong>Placa:</strong> {{currentCar?.car.plate}}
+                </div>
+            </div>
+
+
+            <div>
+                <div>
+                    <strong>Campeonato:</strong> {{currentCar?.round.championship.name}}
+                </div>
+                <div>
+                    <strong>Bateria:</strong> {{currentCar?.round.name}}
+                </div>
+            </div>
+        </div>
+
+
+
+        <table>
+            <tr>
+                <th>Volta</th>
+                <th>Tempo</th>
+            </tr>
+            <tr *ngFor="let lap of laps; let i = index;">
+                <td>{{i +1}}</td>
+                <td>{{lap?.time}}</td>
+            </tr>
+        </table>
+
+
+
+        <!-- <button (click)="emit()">fasdfasdf</button> -->
+
+
+
+    </nb-card-body>
+</nb-card>

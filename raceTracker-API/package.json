@@ -1,0 +1,30 @@
+{
+  "scripts": {
+    "start": "nodemon src/server.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15",
+    "pg": "^8.11.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.31.1",
+    "sequelize-cli": "^6.6.0",
+    "socket.io": "^4.4.1",
+    "sucrase": "^3.32.0",
+    "uniqid": "^5.4.0",
+    "validator": "^13.7.0"
+  },
+  "name": "race-traker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "",
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "env-cmd": "^10.1.0",
+    "eslint": "^8.11.0"
+  }
+}

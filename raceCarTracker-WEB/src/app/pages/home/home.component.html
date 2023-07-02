@@ -1,0 +1,70 @@
+<!-- <div class="d-flex flex-row justify-content-between" style="">
+
+
+
+    <input type="text" nbInput placeholder="Text field">
+</div> -->
+
+
+
+<!-- 
+<nb-card>
+    <nb-card-body> -->
+<!-- <button mat-stroked-button color="primary">Primary</button> -->
+
+<div *ngIf="!dataSource" class="d-flex flex-column align-items-center text-center">
+    <img id="image_profile" width="300" height="200" src="../../../assets/images/undraw_Vehicle_sale_a645.png" alt="">
+    <strong>Não há veículos cadastrados</strong>
+</div>
+
+<nb-card *ngIf="dataSource">
+    <nb-card-header class="bkg-header-yellow">{{pageTitle}}
+    </nb-card-header>
+    <nb-card-body>
+
+
+
+
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+            <!--- Note that these columns can be defined in any order.
+                  The actual rendered columns are set as a property on the row definition" -->
+
+            <!-- Position Column -->
+            <ng-container matColumnDef="position">
+                <th mat-header-cell *matHeaderCellDef> Nome</th>
+                <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef> Modelo </th>
+                <td mat-cell *matCellDef="let element"> {{element.model}} </td>
+            </ng-container>
+
+            <!-- Weight Column -->
+            <ng-container matColumnDef="weight">
+                <th mat-header-cell *matHeaderCellDef> Placa </th>
+                <td mat-cell *matCellDef="let element"> {{element.plate}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="category">
+                <th mat-header-cell *matHeaderCellDef> Categoria </th>
+                <td mat-cell *matCellDef="let element"> {{element?.category.name}} </td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="symbol">
+                <th mat-header-cell *matHeaderCellDef> Proprietário </th>
+                <td mat-cell *matCellDef="let element"> {{element.owner}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+        <!-- </nb-card-body>
+</nb-card> -->
+
+    </nb-card-body>
+</nb-card>

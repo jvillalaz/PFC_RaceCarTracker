@@ -1,0 +1,152 @@
+<nb-card>
+    <nb-card-header class="bkg-header-yellow">Cadastro de Campeonato
+    </nb-card-header>
+    <nb-card-body>
+
+
+        <form [formGroup]="championshipForm" (ngSubmit)="submitChampioshipForm()">
+
+            <div class="form-row">
+
+                <div class="form-group resp-form-row column ml-sm-4 ml-md-4 ml-lg-4">
+                    <label for="name" class="label">Nome da Campeonato</label>
+                    <input fullWidth type="text" nbInput fullWidth id="name" placeholder="Ex: Campeonato Manauara"
+                        formControlName="name">
+                    <!-- <div class="text-danger"
+                        *ngIf="processForm.get('number').invalid && processForm.get('number').touched">
+                        <div *ngIf="processForm.get('number').errors.required">*Campo obrigatório</div>
+                        <div *ngIf="processForm.get('number').errors.minlength">*Caracteres insuficientes</div>
+                        <div *ngIf="processForm.get('number').errors.maxlength">*Caracteres excedentes</div>
+                        <div *ngIf="processForm.get('number').errors.pattern">*Campo Inválido</div>
+                    </div> -->
+
+                </div>
+
+
+
+
+
+                <!-- <div class="form-group resp-form-row column ml-sm-4 ml-md-4 ml-lg-4">
+                    <label for="championship" class="label">Campeonato</label>
+                    <nb-select fullWidth id="championship" placeholder="Campeonato" formControlName="championship">
+                        <nb-option *ngFor="let championship of championships" [value]="championship._id">
+                            {{championship.name}}
+                        </nb-option>
+                    </nb-select> -->
+                <!-- <div class="text-danger"
+                        *ngIf="processForm.get('interested').invalid && processForm.get('interested').touched">
+                        <div *ngIf="processForm.get('interested').errors.required">*Campo obrigatório</div>
+                        <div *ngIf="processForm.get('interested').errors.minlength">*Caracteres insuficientes</div>
+                        <div *ngIf="processForm.get('interested').errors.maxlength">*Máximo de 20 caracteres</div>
+                    </div> -->
+
+                <!-- </div> -->
+            </div>
+
+            <div class="form-row d-flex justify-content-end mt-4">
+
+                <button class="mr-3" type="submit" nbButton size="medium" status="basic">
+                    <!-- <div *ngIf="submittingForm" class="spinner-border text-light" role="status">
+                    <span class="sr-only">Loading...</span>
+                    </div> -->
+                    CANCELAR
+                    <!-- <span *ngIf="!submittingForm"> {{currentAction == 'new' ? 'CADASTRAR' : 'SALVAR'}}</span> -->
+                </button>
+
+                <button type="submit" class="float-right" nbButton size="medium" status="info">
+                    <!-- <div *ngIf="submittingForm" class="spinner-border text-light" role="status">
+                    <span class="sr-only">Loading...</span>
+                    </div> -->
+                    SALVAR
+                    <!-- <span *ngIf="!submittingForm"> {{currentAction == 'new' ? 'CADASTRAR' : 'SALVAR'}}</span> -->
+                </button>
+            </div>
+
+
+            <!-- {{roundForm.value | json}} -->
+
+
+
+
+        </form>
+
+
+    </nb-card-body>
+</nb-card>
+
+
+<nb-card>
+    <nb-card-header class="bkg-header-yellow">{{pageTitle}}
+    </nb-card-header>
+    <nb-card-body>
+
+
+        <form [formGroup]="roundForm" (ngSubmit)="submitForm()">
+
+            <div class="form-row">
+
+                <div class="form-group resp-form-row column ml-sm-4 ml-md-4 ml-lg-4">
+                    <label for="name" class="label">Número da bateria</label>
+                    <input fullWidth type="number" nbInput fullWidth id="name" placeholder="Ex: 1"
+                        formControlName="name">
+                    <!-- <div class="text-danger"
+                        *ngIf="processForm.get('number').invalid && processForm.get('number').touched">
+                        <div *ngIf="processForm.get('number').errors.required">*Campo obrigatório</div>
+                        <div *ngIf="processForm.get('number').errors.minlength">*Caracteres insuficientes</div>
+                        <div *ngIf="processForm.get('number').errors.maxlength">*Caracteres excedentes</div>
+                        <div *ngIf="processForm.get('number').errors.pattern">*Campo Inválido</div>
+                    </div> -->
+
+                </div>
+
+
+
+
+
+                <div class="form-group resp-form-row column ml-sm-4 ml-md-4 ml-lg-4">
+                    <label for="championship" class="label">Campeonato</label>
+                    <nb-select fullWidth id="championship" placeholder="Campeonato" formControlName="championship">
+                        <nb-option *ngFor="let championship of championships" [value]="championship._id">
+                            {{championship.name}}
+                        </nb-option>
+                    </nb-select>
+                    <!-- <div class="text-danger"
+                        *ngIf="processForm.get('interested').invalid && processForm.get('interested').touched">
+                        <div *ngIf="processForm.get('interested').errors.required">*Campo obrigatório</div>
+                        <div *ngIf="processForm.get('interested').errors.minlength">*Caracteres insuficientes</div>
+                        <div *ngIf="processForm.get('interested').errors.maxlength">*Máximo de 20 caracteres</div>
+                    </div> -->
+
+                </div>
+            </div>
+
+            <div class="form-row d-flex justify-content-end mt-4">
+
+                <button class="mr-3" type="submit" nbButton size="medium" status="basic">
+                    <!-- <div *ngIf="submittingForm" class="spinner-border text-light" role="status">
+                    <span class="sr-only">Loading...</span>
+                    </div> -->
+                    CANCELAR
+                    <!-- <span *ngIf="!submittingForm"> {{currentAction == 'new' ? 'CADASTRAR' : 'SALVAR'}}</span> -->
+                </button>
+
+                <button type="submit" class="float-right" nbButton size="medium" status="info">
+                    <!-- <div *ngIf="submittingForm" class="spinner-border text-light" role="status">
+                    <span class="sr-only">Loading...</span>
+                    </div> -->
+                    SALVAR
+                    <!-- <span *ngIf="!submittingForm"> {{currentAction == 'new' ? 'CADASTRAR' : 'SALVAR'}}</span> -->
+                </button>
+            </div>
+
+
+            <!-- {{roundForm.value | json}} -->
+
+
+
+
+        </form>
+
+
+    </nb-card-body>
+</nb-card>

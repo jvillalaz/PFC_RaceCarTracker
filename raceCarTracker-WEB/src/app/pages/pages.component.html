@@ -1,0 +1,109 @@
+<div class="d-flex flex-row justify-content-between" style="height: 100vh;">
+
+    <nb-card class="left-side-bar flex-column">
+        <div class="bkg-logo mb-3">
+            <img id="image_profile" height="100" src="../../assets/images/bandeira-de-corrida.png" alt="">
+        </div>
+
+        <div class="bottom-separator" [routerLink]="item.url" target="_blank" *ngFor="let item of links">
+            <div class="text-center mt-3 p-2">
+                <div>
+                    <mat-icon class="mr-2" aria-hidden="false" aria-label="Example home icon">{{item.icon}}</mat-icon>
+                    <strong>{{item.label}}</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- <button class="btn-download mt-3" nbButton status="info">Dowload CV<nb-icon icon="download"></nb-icon>
+        </button> -->
+    </nb-card>
+
+    <nb-layout-column withScroll style="overflow-y: auto;">
+
+        <!-- <nb-card class="p-3 banner-container"> -->
+        <router-outlet></router-outlet>
+        <!-- <div class="banner-text ">
+                <h3>
+                    Olá, eu sou Evaldo Cardoso Desenvolvedor de <span>Software</span>
+                </h3>
+                <div class="">
+                    <span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae blanditiis recusandae
+                        consequatur
+                        necessitatibus animi accusamus perferendis molestias mollitia voluptates laudantium modi quo
+                        natus,
+                        aspernatur magnam! Consectetur quis iste nobis quia!
+                    </span>
+                </div>
+            </div>
+            <img src="../../../assets/images/dev.svg" alt=""> -->
+        <!-- </nb-card> -->
+
+        <!-- <nb-card class="p-3 banner-container">
+            <div class="banner-text ">
+                <h3>
+                    Olá, eu sou Evaldo Cardoso Desenvolvedor de <span>Software</span>
+                </h3>
+                <div class="">
+                    <span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae blanditiis recusandae
+                        consequatur
+                        necessitatibus animi accusamus perferendis molestias mollitia voluptates laudantium modi quo
+                        natus,
+                        aspernatur magnam! Consectetur quis iste nobis quia!
+                    </span>
+                </div>
+            </div>
+            <img src="../../../assets/images/dev.svg" alt="">
+        </nb-card>
+        <nb-card class="p-3 banner-container">
+            <div class="banner-text ">
+                <h3>
+                    Olá, eu sou Evaldo Cardoso Desenvolvedor de <span>Software</span>
+                </h3>
+                <div class="">
+                    <span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae blanditiis recusandae
+                        consequatur
+                        necessitatibus animi accusamus perferendis molestias mollitia voluptates laudantium modi quo
+                        natus,
+                        aspernatur magnam! Consectetur quis iste nobis quia!
+                    </span>
+                </div>
+            </div>
+            <img src="../../../assets/images/dev.svg" alt="">
+        </nb-card> -->
+        <!-- <nb-card class="p-3 banner-container">
+            <div class="banner-text ">
+                <h3>
+                    Olá, eu sou Evaldo Cardoso Desenvolvedor de <span>Software</span>
+                </h3>
+                <div class="">
+                    <span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae blanditiis recusandae
+                        consequatur
+                        necessitatibus animi accusamus perferendis molestias mollitia voluptates laudantium modi quo
+                        natus,
+                        aspernatur magnam! Consectetur quis iste nobis quia!
+                    </span>
+                </div>
+            </div>
+            <img src="../../../assets/images/dev.svg" alt="">
+        </nb-card> -->
+
+    </nb-layout-column>
+
+
+    <nb-card class=" order-last rigth-menu d-flex align-items-center">
+        <!-- <div> -->
+        <button (click)="changeTheme()" class="btn-menu" nbTooltip="Tema Dark" nbTooltipPlacement="top" nbButton
+            status="basic">
+            <nb-icon icon="{{currentTheme == 'dark' ? 'moon' : 'sun'}}"></nb-icon>
+        </button>
+        <!-- </div> -->
+
+    </nb-card>
+
+
+
+</div>

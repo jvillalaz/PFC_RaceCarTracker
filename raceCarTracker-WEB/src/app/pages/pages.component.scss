@@ -1,0 +1,116 @@
+.left-side-bar {
+    width: 290px;
+    height: 100vh;
+    margin: 0;
+    padding: 40px;
+    img#image_profile {
+        // border-radius: 50%;
+    }
+}
+
+.rigth-menu {
+    width: 60px;
+    height: 100vh;
+    margin: 0;
+    padding: 40px 12px;
+}
+
+.bkg-logo {
+    background: #fff;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom-separator {
+    border-bottom: 1.5px solid #f0f0f6;
+    padding-bottom: 15px;
+    cursor: pointer;
+    div {
+        div {
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        strong {
+            font-size: 16px;
+        }
+    }
+    &:hover {
+        background: #192038;
+    }
+}
+
+.social-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .social-media {
+        width: 27px;
+        height: 27px;
+        // background-color: #0095ff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: none;
+        padding: 5px !important;
+
+        nb-icon {
+            color: #000 !important;
+            font-size: 14px;
+        }
+    }
+}
+
+.btn-download {
+    // background-color: #0095ff !important;
+    // border-color: #0095ff !important;
+    color: #000 !important;
+    padding-left: 7px !important;
+    padding-right: 7px !important;
+}
+
+.btn-menu {
+    width: 27px;
+    height: 27px;
+    // background-color: #0095ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: none;
+    padding: 5px !important;
+    margin: 0 !important;
+
+    nb-icon {
+        color: #000 !important;
+        font-size: 14px;
+    }
+}
+
+.banner-container {
+    display: flex;
+    flex-direction: row;
+
+    .banner-text {
+        h3 {
+            span {
+                color: #0095ff;
+                width: min-content;
+            }
+        }
+    }
+
+    img {
+        // height: min-content;
+        width: 315px;
+        float: right;
+        display: flex;
+    }
+}

@@ -1,0 +1,112 @@
+<nb-card>
+    <nb-card-header class="bkg-header-yellow">{{pageTitle}}
+    </nb-card-header>
+    <nb-card-body>
+
+
+        <form [formGroup]="carForm" (ngSubmit)="submitForm()">
+
+            <div class="form-row">
+
+                <div class="form-group resp-form-row column ml-sm-4 ml-md-4 ml-lg-4">
+                    <label for="model" class="label">Modelo</label>
+                    <input maxlength="20" fullWidth type="text" nbInput fullWidth id="model" placeholder="Ex: Evo X"
+                        formControlName="model">
+                    <!-- <div class="text-danger"
+                        *ngIf="processForm.get('number').invalid && processForm.get('number').touched">
+                        <div *ngIf="processForm.get('number').errors.required">*Campo obrigatório</div>
+                        <div *ngIf="processForm.get('number').errors.minlength">*Caracteres insuficientes</div>
+                        <div *ngIf="processForm.get('number').errors.maxlength">*Caracteres excedentes</div>
+                        <div *ngIf="processForm.get('number').errors.pattern">*Campo Inválido</div>
+                    </div> -->
+
+                </div>
+                <!-- <div>{{processForm.errors|json}}</div> -->
+
+
+
+                <div class="form-group resp-form-row column ml-sm-4 ml-md-4 ml-lg-4">
+                    <label for="name" class="label">Marca</label>
+                    <input maxlength="20" fullWidth type="text" nbInput fullWidth id="name"
+                        placeholder="Marca ou apelido" formControlName="name">
+                    <!-- <div class="text-danger"
+                        *ngIf="processForm.get('documentNumber').invalid && processForm.get('documentNumber').touched">
+                        <div *ngIf="processForm.get('documentNumber').errors.required">*Campo obrigatório</div>
+                        <div *ngIf="processForm.get('documentNumber').errors.pattern">*Valor Inválido</div>
+                        <div *ngIf="processForm.get('documentNumber').errors.minlength">*Caracteres insuficientes</div>
+                    </div> -->
+
+                </div>
+
+                <div class="form-group resp-form-row column ml-sm-4 ml-md-4 ml-lg-4">
+                    <label for="owner" class="label">Proprietário</label>
+                    <input fullWidth type="text" nbInput fullWidth id="owner" placeholder="Ex: Irineu Souza"
+                        formControlName="owner">
+                    <!-- <div class="text-danger" *ngIf="processForm.get('code').invalid && processForm.get('code').touched">
+                        <div *ngIf="processForm.get('code').errors.required">*Campo obrigatório</div>
+                        <div *ngIf="processForm.get('code').errors.minlength">*Caracteres insuficientes</div>
+
+                    </div> -->
+
+                </div>
+
+
+                <div class="form-group resp-form-row column ml-sm-4 ml-md-4 ml-lg-4">
+                    <label for="plate" class="label">Placa</label>
+                    <input maxlength="15" fullWidth type="text" nbInput fullWidth id="plate" placeholder="xxx-xxxx"
+                        formControlName="plate">
+                    <!-- <div class="text-danger"
+                        *ngIf="processForm.get('interested').invalid && processForm.get('interested').touched">
+                        <div *ngIf="processForm.get('interested').errors.required">*Campo obrigatório</div>
+                        <div *ngIf="processForm.get('interested').errors.minlength">*Caracteres insuficientes</div>
+                        <div *ngIf="processForm.get('interested').errors.maxlength">*Máximo de 20 caracteres</div>
+                    </div> -->
+
+                </div>
+
+                <div class="form-group resp-form-row column ml-sm-4 ml-md-4 ml-lg-4">
+                    <label for="category" class="label">Categoria</label>
+                    <nb-select fullWidth id="category" placeholder="Categoria" formControlName="category">
+                        <nb-option *ngFor="let category of categories" [value]="category._id">{{category.description}}
+                        </nb-option>
+                    </nb-select>
+                    <!-- <div class="text-danger"
+                        *ngIf="processForm.get('interested').invalid && processForm.get('interested').touched">
+                        <div *ngIf="processForm.get('interested').errors.required">*Campo obrigatório</div>
+                        <div *ngIf="processForm.get('interested').errors.minlength">*Caracteres insuficientes</div>
+                        <div *ngIf="processForm.get('interested').errors.maxlength">*Máximo de 20 caracteres</div>
+                    </div> -->
+
+                </div>
+            </div>
+
+            <div class="form-row d-flex justify-content-end mt-4">
+
+                <button class="mr-3" type="submit" nbButton size="medium" status="basic">
+                    <!-- <div *ngIf="submittingForm" class="spinner-border text-light" role="status">
+                    <span class="sr-only">Loading...</span>
+                    </div> -->
+                    CANCELAR
+                    <!-- <span *ngIf="!submittingForm"> {{currentAction == 'new' ? 'CADASTRAR' : 'SALVAR'}}</span> -->
+                </button>
+
+                <button type="submit" class="float-right" nbButton size="medium" status="info">
+                    <!-- <div *ngIf="submittingForm" class="spinner-border text-light" role="status">
+                    <span class="sr-only">Loading...</span>
+                    </div> -->
+                    SALVAR
+                    <!-- <span *ngIf="!submittingForm"> {{currentAction == 'new' ? 'CADASTRAR' : 'SALVAR'}}</span> -->
+                </button>
+            </div>
+
+
+            <!-- {{carForm.value | json}} -->
+
+
+
+
+        </form>
+
+
+    </nb-card-body>
+</nb-card>
