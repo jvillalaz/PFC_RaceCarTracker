@@ -1,4 +1,4 @@
-# Kartodromo ESP32 Firmware
+# Race tracker - ESP32 Firmware
 
 O Kartodromo ESP32 é um firmware em escrito em micropython desenvolvida para registro de campeonatos de corrida de automóveis. 
 A ideia é que seja a interface de comunicação entre o microcontrolador, que captura os tempos de cada volta na pista, e a aplicação Web, que disponibiliza
