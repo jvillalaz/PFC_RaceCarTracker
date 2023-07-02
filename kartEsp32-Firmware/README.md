@@ -27,7 +27,7 @@ esse dado de forma intuitiva para o usuário final.
 ### Clonand o projeto
 Clone o projeto 
 
-  `$ git clone git@github.com:Evaldoes/Kart-esp32-cronomentro.git`
+  `$ git clone https://github.com/jvillalaz/PFC_RaceCarTracker.git`
   
    `$ source venv/bin/activate'`
    
