@@ -11,5 +11,10 @@ esse dado de forma intuitiva para o usuário final.
  * Yarn 
  * PostgreSQL
  * Heroku (for production deployment)
- * 
+ * NPM
+ * Typescript
+ * CSS
+ * SASS
+ * HTML
+
 
