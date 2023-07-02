@@ -24,7 +24,7 @@ esse dado de forma intuitiva para o usuário final.
 ### Clonando o projeto
 Clone o projeto 
 
-  `$ 'git clone git@github.com:Evaldoes/cronometro-kartodromo.git`
+  `$ 'git clone https://github.com/jvillalaz/PFC_RaceCarTracker.git`
 
 
 
