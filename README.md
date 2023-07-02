@@ -16,5 +16,10 @@ esse dado de forma intuitiva para o usuário final.
  * CSS
  * SASS
  * HTML
+ * Python
+ * MicroPython
+ * HTTP
+ * Pycharm
+
 
 
