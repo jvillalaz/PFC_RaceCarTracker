@@ -1,4 +1,4 @@
-# race-tracker-api
+# raceTracker-API
 
 Race Tracker é uma aplicação em NodeJS desenvolvida para registro de campeonatos de corrida de automóveis. 
 A ideia é que seja a interface de comunicação entre o microcontrolador, que captura os tempos de cada volta na pista, e a aplicação Web, que disponibiliza
